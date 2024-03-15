@@ -30,11 +30,20 @@ const config: Config = {
     },
     colors: {
       second:"rgba(255, 255, 255, 0.2)",
-      primary:'#2a2626',
-      white:'#fff',
+      primary:'#271d16',
+      white:'#cccccc',
       third:'#816330'
       
-    }
+    },
+    letterSpacing: {
+      tightest: '-.075em',
+       tighter: '-.05em',
+      tight: '-.025em',
+       normal: '0',
+      wide: '.025em',
+       wider: '.05em',
+       widest: '.25em',
+     },
   },
   plugins: [],
 };
