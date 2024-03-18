@@ -6,3 +6,11 @@ body{
   color: #fffaf3;
   background-color: #271d16;
 }
+.group:hover .child {
+  width: 100%;
+  transition: width 0.3s ease;
+}
+.group:hover{
+  background-color: #423329;
+  transition: background-color 0.6s ease;
+}

@@ -26,6 +26,7 @@ export default function Home() {
   };
 
   return (<>
+  
     <div className="relative bg-cover sm:bg-left w-screen h-screen uppercase tracking-widest leading-normal font-thin" style={{ backgroundImage: `url(${images[currentIndex]})`, transition: 'background-image 2s ease' }}>
     <div className=" hidden md:flex absolute w-24 h-24 z-20 border-r-2 border-b-2 border-white border-opacity-20 bottom-[5%] right-[5%]"></div>
     <div className="hidden md:flex absolute w-24 h-24 z-20 border-t-2 border-r-2 border-white border-opacity-20 top-[5%] right-[5%]"></div>
@@ -50,6 +51,7 @@ export default function Home() {
     <About/>
     <Projects/>
     <Services/>
+    
   </>
   );
 }

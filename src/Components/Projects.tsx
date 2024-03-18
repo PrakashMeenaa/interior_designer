@@ -51,22 +51,19 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <div className='bg-primary tracking-widest leading-normal font-thin mt-24 mb-24 mx-2 sm:px-16 md:px-32  '>
+    <div className='bg-primary tracking-widest leading-normal font-thin pt-24 pb-24 mx-2 sm:px-16 md:px-32  '>
     <h1 className='uppercase  text-5xl font-normal'> Our <span className='text-third'>projects</span></h1>
     <div className="max-w-[1400px] h-[780px] w-full m-auto py-10 px-4 relative group ">
       <div
-        style={{ backgroundImage: `url(${slides[currentIndex].url})` , opacity:'60%' }}
+        style={{ backgroundImage: `url(${slides[currentIndex].url})` , opacity:'55%' }}
         className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
       ></div>
-      {/* Left Arrow */}
       <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
         <BsChevronCompactLeft onClick={prevSlide} size={30} />
       </div>
-      {/* Right Arrow */}
       <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
         <BsChevronCompactRight onClick={nextSlide} size={30} />
       </div>
-      {/* Slide Indicators */}
       <div className="flex top-4 justify-center py-2">
         {slides.map((_, slideIndex) => (
             <div
@@ -80,7 +77,6 @@ const Projects: React.FC = () => {
           </div>
         ))}
       </div>
-      {/* Title and Description */}
       <div className="absolute bottom-28 left-0 right-0 text-center text-white px-16">
         <h2 className="text-xl uppercase font-normal ">{slides[currentIndex].title}</h2>
         <p className="text-sm ">{slides[currentIndex].description}</p>

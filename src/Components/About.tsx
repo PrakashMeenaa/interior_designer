@@ -2,7 +2,7 @@ import React from "react";
 
 const About = () => {
   return (
-    <div className="tracking-widest leading-normal font-thin mt-24 mb-24 mx-2 ">
+    <div className="tracking-widest leading-normal font-thin pt-24 pb-24 mx-2 ">
       <div className=" flex flex-col sm:grid sm:grid-flow-col sm:grid-cols-2 sm:px-16 md:px-32 gap-20">
         <div className="flex flex-col text-white gap-4 py-4">
       <div className=" flex gap-3 uppercase  text-4xl font-normal">
@@ -18,7 +18,7 @@ const About = () => {
             
         </div>
         <div className="bg-primary  relative w-full h-max flex flex-col items-end ">
-          <img src="/Images/office.webp" alt="office" className="h-56 w-80 sm:h-72 sm:w-full opacity-70 object-cover mr-2" />
+          <img src="/Images/office.webp" alt="office" className="h-56 w-80 sm:h-72 sm:w-full opacity-55 object-cover mr-2" />
           <p className=" absolute -bottom-5 right-6 uppercase bg-third py-3 px-4">Jaipur Office</p>
         </div>
       </div>

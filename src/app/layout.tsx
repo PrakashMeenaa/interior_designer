@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Oswald } from "next/font/google";
 import "./globals.css";
 import Header from "../Components/Header";
+import Footer from "@/Components/Footer";
+import BackToTopButton from '@/Components/BackToTopButton';
 
 
 const oswald = Oswald({ subsets: ['latin'] });
@@ -19,8 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={oswald.className}>
+      <BackToTopButton/>
         <Header/>
         {children}
+        <Footer/>
         </body>
     </html>
   );

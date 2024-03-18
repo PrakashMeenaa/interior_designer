@@ -34,7 +34,7 @@ const Header: React.FC = () => {
 
   return (
     <nav
-      className='uppercase sticky top-0 left-0 right-0 z-10 tracking-widest transition-all duration-1000 font-thin bg-primary '
+      className='uppercase sticky top-0 left-0 right-0 z-20 tracking-widest transition-all duration-1000 font-thin bg-primary '
     >
       <div ref={menuRef} className='md:hidden h-max w-screen flex justify-between pr-4'>
         <img src='/Logo2.png' alt='LOGO' className='h-20' />
@@ -50,7 +50,7 @@ const Header: React.FC = () => {
           <Link href='/contact'>Contact</Link>
         </div>
       )}
-      { scrolled? (<div className=' hidden md:flex absolute flex-row items-center w-screen z-10 bg-primary transition-all duration-700'>
+      { scrolled? (<div className=' hidden md:flex absolute flex-row items-center w-screen z-20 bg-primary transition-all duration-700'>
         <img src='/Logo2.png' alt='LOGO' className='h-20' />
         <div className='flex flex-row justify-between w-full px-[5%] md:px-[10%]'>
           <Link href='/'>Home</Link>
@@ -60,7 +60,7 @@ const Header: React.FC = () => {
         </div>
       </div>):
 
-      <div className='hidden md:flex absolute flex-row items-center w-screen z-10'>
+      <div className='hidden md:flex absolute flex-row items-center w-screen z-20'>
         <img src='/Logo.png' alt='LOGO' className='h-48' />
         <div className='flex flex-row justify-between w-full px-[5%] md:px-[10%]'>
           <Link href='/'>Home</Link>

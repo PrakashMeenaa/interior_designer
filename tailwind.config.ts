@@ -11,6 +11,16 @@ const config: Config = {
       backgroundImage: {
         'banner-bg':"url('../../public/Images/1.jpeg')"
       },
+      animation: {
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+      },
+      keyframes: {
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        }
+      } 
+      
     },
     screens: {
       'sm': '640px',
