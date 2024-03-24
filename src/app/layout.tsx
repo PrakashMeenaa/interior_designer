@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import { Oswald } from "next/font/google";
 import "./globals.css";
-import Header from "../Components/Header";
 import Footer from "@/Components/Footer";
-import BackToTopButton from '@/Components/BackToTopButton';
+import BackToTopButton from "@/Components/BackToTopButton";
+import Banner from "@/Components/Banner";
 
-
-const oswald = Oswald({ subsets: ['latin'] });
+const oswald = Oswald({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Chaar Diwari",
@@ -21,11 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={oswald.className}>
-      <BackToTopButton/>
-        <Header/>
+        <BackToTopButton />
+        <Banner />
         {children}
-        <Footer/>
-        </body>
+        <Footer />
+      </body>
     </html>
   );
 }

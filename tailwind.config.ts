@@ -8,18 +8,6 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'banner-bg':"url('../../public/Images/1.jpeg')"
-      },
-      animation: {
-        'infinite-scroll': 'infinite-scroll 25s linear infinite',
-      },
-      keyframes: {
-        'infinite-scroll': {
-          from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(-100%)' },
-        }
-      } 
       
     },
     screens: {
@@ -42,7 +30,8 @@ const config: Config = {
       second:"rgba(255, 255, 255, 0.2)",
       primary:'#271d16',
       white:'#cccccc',
-      third:'#816330'
+      third:'#816330',
+      fourth:'#423329'
       
     },
     letterSpacing: {
