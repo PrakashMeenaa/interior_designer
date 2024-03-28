@@ -33,4 +33,3 @@ function Team(props: props) {
 }
 
 export default Team;
-// "/Images/team2.jpeg"

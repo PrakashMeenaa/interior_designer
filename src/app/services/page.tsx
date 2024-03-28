@@ -1,10 +1,8 @@
-import React from "react";
-import { Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css/bundle";
+'use client'
 import Link from "next/link";
+import React from "react";
 
-const Services = () => {
+const page = () => {
   const services = [
     {
       imgbg: "1.jpeg",
@@ -23,42 +21,16 @@ const Services = () => {
     },
     { imgbg: "6.jpeg", imgsrc: "decorplan.png", name: "Decor plan", description: "Crafting refined design schemes to elevate interiors with personality and harmony, expressing individuality and taste." },
   ];
-
   return (
     <div className="bg-primary tracking-widest leading-normal font-thin pt-24 pb-24  sm:px-16 md:px-32  ">
       <h1 className="uppercase  text-5xl font-normal mb-8">
         Our <span className="text-third">services</span>
       </h1>
-      <div className="flex flex-col h-[420px]">
-        <Swiper
-          spaceBetween={30}
-          slidesPerView={3}
-          loop={true}
-          pagination={{
-            clickable: true,
-          }}
-          breakpoints={{
-            "@0.00": {
-              slidesPerView: 1,
-              spaceBetween: 10,
-            },
-            "@01": {
-              slidesPerView: 2,
-              spaceBetween: 20,
-            },
-            "@1.50": {
-              slidesPerView: 3,
-              spaceBetween: 50,
-            },
-          }}
-          modules={[Pagination]}
-          className="mySwiper w-full relative"
-        >
-          {services.map((s, index: number) => {
-            return (
-              <SwiperSlide key={index}>
-                <Link href={`/services/${s.name}`} >
-                <div
+      <div className="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {services.map((s, index) => {
+          return (
+            <Link href={`/services/${s.name.toLowerCase().replace(/\s+/g, "")}`} key={index}>
+            <div
                   className="group bg-cover bg-center bg-primary bg-blend-overlay bg-opacity-80 transition-all ease-in-out cursor-pointer flex flex-col gap-8 py-14 px-8 border-2 border-opacity-20  border-third relative h-96"
                   onMouseEnter={(e) => (e.currentTarget.style.backgroundImage = `url(/Images/services/background/${s.imgbg})`)}
                   onMouseLeave={(e) => (e.currentTarget.style.backgroundImage = "")}
@@ -72,13 +44,11 @@ const Services = () => {
                   <div className="text-white text-4xl group-hover:brightness-150 font-semibold font-oswald absolute bottom-8 right-8 opacity-10">0{index + 1}</div>
                 </div>
                 </Link>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+          );
+        })}
       </div>
     </div>
   );
 };
 
-export default Services;
+export default page;

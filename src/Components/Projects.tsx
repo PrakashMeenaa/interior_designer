@@ -58,9 +58,9 @@ const Projects: React.FC = () => {
           modules={[Pagination, Keyboard, Navigation]}
           className="mySwiper w-full relative "
         >
-          {Projects.map((r) => {
-            return (
-              <SwiperSlide>
+          {Projects.map((r: Projects, index: number) => {
+  return (
+    <SwiperSlide key={index}>
                 <div style={{ backgroundImage: `url(${r.url})`, opacity: "55%" }} className="w-full h-full rounded-2xl bg-center bg-cover duration-500"></div>
                 <div className="flex top-4 justify-center py-2">
                   <div className="absolute bottom-28 left-0 right-0 text-center text-white px-16">

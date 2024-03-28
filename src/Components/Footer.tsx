@@ -36,9 +36,9 @@ const Footer: React.FC = () => {
             className="mySwiper w-screen lg:w-[640px] h-max py-7"
             style={{ margin: 0 }}
           >
-            {services.map((p) => {
+            {services.map((p: string, index: number) => {
               return (
-                <SwiperSlide style={{ minHeight: "60px" }}>
+                <SwiperSlide key={index} style={{ minHeight: "60px" }}>
                   <img src={p} alt="services logo" className=" h-20 max-w-40" />
                 </SwiperSlide>
               );

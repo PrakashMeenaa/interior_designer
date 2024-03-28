@@ -32,9 +32,9 @@ const Reviews = () => {
           modules={[Pagination, Mousewheel]}
           className="mySwiper w-full relative "
         >
-          {reviews.map((r) => {
-            return (
-              <SwiperSlide>
+          {reviews.map((r, index: number) => {
+  return (
+    <SwiperSlide key={index}>
                 <div className="h-max">
                   <div className="h-36">
                     <p className="text-sm py-5 w-full">{r.review}</p>
